@@ -19,8 +19,8 @@ body {
 
 body {
     overflow-x: hidden;
-}
 
-body._lock {
-    overflow: hidden;
+    &._lock {
+        overflow: hidden;
+    }
 }

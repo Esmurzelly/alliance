@@ -1,22 +1,28 @@
-let map;
+import locationMarker from './assets/img/location-marker.svg';
+let center = [41.874902, -88.017996];
 
-async function initMap() {
-  const position = { lat: -25.344, lng: 131.031 };
-
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
-
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
+const init = () => {
+  let map = new ymaps.Map('map', {
+    center,
+    zoom: 13,
   });
 
-  const marker = new AdvancedMarkerView({
-    map: map,
-    position: position,
-    title: "Uluru",
+  let placemark = new ymaps.Placemark(center, {}, {
+    iconLayout: 'default#image',
+    iconImageHref: locationMarker,
+    iconImageSize: [40, 40],
+    iconImageOffset: [0, 0],
   });
-}
 
-initMap();
+  map.controls.remove('geolocationControl');
+  map.controls.remove('searchControl');
+  map.controls.remove('trafficControl');
+  map.controls.remove('typeSelector');
+  map.controls.remove('fullscreenControl');
+  map.controls.remove('zoomControl');
+  map.controls.remove('rulerControl');
+
+  map.geoObjects.add(placemark);
+};
+
+ymaps.ready(init);

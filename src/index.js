@@ -1,4 +1,5 @@
 import { swiper, swiperSecond } from './slider';
+import './map'
 import './scss/style.scss';
 
 const iconMenu = document.querySelector('.menu__icon');
