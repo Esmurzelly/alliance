@@ -1,20 +1,17 @@
 // variables
 $dark_text: #142B35;
-$medium_blue_primary: #328BA4;
-$medium_blue_mobile: #3A98B2;
-
-$medium_blue: #3A98B2;
-
 $gray_text: #5B6E76;
 $gray_text_secondary: #738697;
-$light_gray: #E0E0E0;
 
 $light_blue: #3A98B2;
+$medium_blue: #3A98B2;
+$medium_blue_primary: #328BA4;
+$medium_blue_mobile: #3A98B2;
 
 $medium_yellow: #F2B91D;
 $medium_yellow_hover: #ECB51D;
 
-
+$light_gray: #E0E0E0;
 
 // mixins
 @mixin header_button($hover_color) {
