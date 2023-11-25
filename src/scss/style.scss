@@ -1,0 +1,27 @@
+@import './fonts.scss';
+@import './adaptive.scss';
+@import './home.scss';
+
+@import url('swiper/css');
+@import url('swiper/css/pagination');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body._lock {
+    overflow: hidden;
+}

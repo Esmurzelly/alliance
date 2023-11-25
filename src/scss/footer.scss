@@ -1,0 +1,40 @@
+@import './variables.scss';
+
+.footer {
+    background-color: #fff;
+    color: #142B35;
+    font-size: 12px;
+    padding: 4px 0 40px;
+
+    hr {
+        background-color: $light_gray;
+        border: none;
+        height: 1px;
+
+    }
+
+    &__wrapper {
+        width: calc(100% - 115px);
+        margin: 0 auto;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+        
+        &-policy {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 44px;
+        }
+    }
+
+}
